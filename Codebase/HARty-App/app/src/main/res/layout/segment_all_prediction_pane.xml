@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginLeft="@dimen/_16sdp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/_14sdp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_30sdp"
+            android:paddingLeft="@dimen/_30sdp"
+            android:paddingTop="@dimen/_16sdp"
+            android:paddingEnd="@dimen/_16sdp"
+            android:paddingRight="@dimen/_16sdp"
+            android:paddingBottom="@dimen/_16sdp">
+
+            <LinearLayout
+                android:id="@+id/current"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13sdp"
+                    android:text="Current Activity : ">
+                </TextView>
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="25dp" />
+
+                <TextView
+                    android:id="@+id/predictionText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13sdp"
+                    android:gravity="center"
+                    android:text="N/A">
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sittingLinear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="@id/current"
+                app:layout_constraintStart_toStartOf="@id/current"
+                android:paddingTop="@dimen/_40sdp">
+
+                <TextView
+                    android:id="@+id/sitting"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11sdp"
+                    android:textAlignment="textStart"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:text="Sitting">
+
+                </TextView>
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="25dp" />
+
+                <TextView
+                    android:id="@+id/sittingTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11sdp"
+                    android:gravity="center"
+                    android:text="0:00">
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/standingLinear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="@id/sittingLinear"
+                app:layout_constraintStart_toStartOf="@id/sittingLinear"
+                android:paddingTop="@dimen/_60sdp">
+
+                <TextView
+                    android:id="@+id/standing"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11sdp"
+                    android:textAlignment="textStart"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:text="Standing">
+                </TextView>
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="25dp" />
+
+                <TextView
+                    android:id="@+id/standingTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11sdp"
+                    android:gravity="center"
+                    android:text="0:00">
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/walkingLinear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="@id/standingLinear"
+                app:layout_constraintStart_toStartOf="@id/standingLinear"
+                android:paddingTop="@dimen/_80sdp">
+
+                <TextView
+                    android:id="@+id/walking"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11sdp"
+                    android:textAlignment="textStart"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:text="Walking">
+                </TextView>
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="25dp" />
+
+                <TextView
+                    android:id="@+id/walkingTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11sdp"
+                    android:gravity="center"
+                    android:text="0:00">
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/runningLinear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="@id/walkingLinear"
+                app:layout_constraintStart_toStartOf="@id/walkingLinear"
+                android:paddingTop="@dimen/_100sdp">
+
+                <TextView
+                    android:id="@+id/running"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11sdp"
+                    android:textAlignment="textStart"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:text="Running">
+                </TextView>
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="25dp" />
+
+                <TextView
+                    android:id="@+id/runningTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11sdp"
+                    android:gravity="center"
+                    android:text="0:00">
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lyingDownLinear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="@id/runningLinear"
+                app:layout_constraintStart_toStartOf="@id/runningLinear"
+                android:paddingTop="@dimen/_120sdp">
+
+                <TextView
+                    android:id="@+id/lyingDown"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11sdp"
+                    android:textAlignment="textStart"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:text="Lying down">
+                </TextView>
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="25dp" />
+
+                <TextView
+                    android:id="@+id/lyingTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11sdp"
+                    android:gravity="center"
+                    android:text="0:00">
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/generalMovementLinear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="@id/lyingDownLinear"
+                app:layout_constraintStart_toStartOf="@id/lyingDownLinear"
+                android:paddingTop="@dimen/_140sdp">
+
+                <TextView
+                    android:id="@+id/generalMovement"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11sdp"
+                    android:textAlignment="textStart"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:text="Movement">
+                </TextView>
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="25dp" />
+
+                <TextView
+                    android:id="@+id/generalTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11sdp"
+                    android:gravity="center"
+                    android:text="0:00">
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/StairsLinear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="@id/generalMovementLinear"
+                app:layout_constraintStart_toStartOf="@id/generalMovementLinear"
+                android:paddingTop="@dimen/_160sdp">
+
+                <TextView
+                    android:id="@+id/stairs"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11sdp"
+                    android:textAlignment="textStart"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:text="Stairs">
+                </TextView>
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="25dp" />
+
+                <TextView
+                    android:id="@+id/stairsTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11sdp"
+                    android:gravity="center"
+                    android:text="0:00">
+                </TextView>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/headerCard"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginTop="21dp"
+        app:cardBackgroundColor="@color/connect_respeck_background"
+        app:cardCornerRadius="@dimen/_14sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_8sdp"
+            android:src="@drawable/prediction_icon">
+
+        </androidx.appcompat.widget.AppCompatImageView>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
